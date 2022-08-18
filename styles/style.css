@@ -1,0 +1,81 @@
+@import url(./variables.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--VeryDarkBlue);
+    color: var(--lightGrey);
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+.containerContent {
+    background-color: var(--darkBlue);
+    height: 350px;
+    width: 350px;
+    border-radius: 23px;
+    padding: 30px;
+}
+.content .circle, p {
+    margin-bottom: 20px;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--shadow);
+    border-radius: 50%;
+    height: 43px;
+    width: 43px;
+    transition: all 500ms ease;
+}
+.circle.active {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+.circle:hover {
+    background-color: var(--primaryColor);
+}
+.content h1 {
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.content p {
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+button {
+    background-color: var(--primaryColor);
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 3px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 500ms ease;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--primaryColor);
+}
