@@ -27,22 +27,23 @@ body {
 .content .circle, p {
     margin-bottom: 20px;
 }
-.circle {
+.circle, .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     background-color: var(--shadow);
     border-radius: 50%;
     height: 43px;
     width: 43px;
     transition: all 500ms ease;
 }
-.circle.active {
+.circle[active] {
     background-color: var(--lightGrey);
     color: var(--white);
 }
 .circle:hover {
+    color: white;
+    cursor: pointer;
     background-color: var(--primaryColor);
 }
 .content h1 {
@@ -55,7 +56,11 @@ body {
     font-size: 14px;
 }
 
-.row {
+.content.hidden {
+    display: none;
+}
+
+.select {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -78,4 +83,61 @@ button {
 button:hover {
     background-color: var(--white);
     color: var(--primaryColor);
+}
+
+button:disabled {
+    opacity: 0.2;
+}
+
+.thankYou {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.thankYou.active {
+    display: flex;
+}
+
+.thankYou img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.thankYou p {
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 22px;
+}  
+
+.thankYou h2 {
+    color: var(--white);
+}
+
+.thankYou div, h2 {
+    margin-bottom: 15px;
+}
+
+.rateText {
+    background-color: var(--shadow);
+    padding: 5px 10px;
+    width: 70%;
+    border-radius: 18px;
+    color: var(--primaryColor);
+}
+
+@media (max-width: 375px) {
+    .containerContent {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .circle, .logo {
+        justify-items: center;
+    }
+    .attribution {
+        text-align: center;
+    }
 }
